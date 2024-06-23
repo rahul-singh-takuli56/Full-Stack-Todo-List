@@ -27,7 +27,9 @@ const Todo = () => {
       toast.error("Title or Body should not be Empty !");
     } else {
       if (id) {
-        await axios.post("http://localhost3000/api/v2/addTask"),
+        await axios.post(
+          "https://todo-list-backend-gamma.vercel.app/v2/addTask"
+        ),
           { title: Inputs.title, body: Inputs.body, id: id }.then((res) => {
             console.log(res);
           });

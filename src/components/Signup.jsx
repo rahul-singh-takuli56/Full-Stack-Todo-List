@@ -18,7 +18,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await axios
-      .post("http://localhost:3000/api/v1/register", Inputs)
+      .post("https://todo-list-backend-gamma.vercel.app/v1/register", Inputs)
       .then((res) => {
         alert(res.data.message);
         setInputs({
